@@ -1,0 +1,54 @@
+{
+  "name": "clock-break-timer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "dev": "npx serve . -p 3000",
+    "electron": "electron .",
+    "electron-dev": "electron . --dev",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "build-all": "electron-builder --win --mac --linux"
+  },
+  "keywords": ["clock", "timer", "teaching", "presentation", "analog clock", "break timer"],
+  "author": "TechTrainerTim",
+  "license": "ISC",
+  "description": "Minimal clock for personal use and shareable break timer for teaching and presentations",
+  "devDependencies": {
+    "electron": "^32.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.techtrainertim.clock-break-timer",
+    "productName": "Tim's Clock & Timer",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "*.html",
+      "*.css",
+      "*.js",
+      "*.json",
+      "!node_modules",
+      "!dist",
+      "!CLAUDE.md",
+      "!PRD.md",
+      "!README.md"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": null
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": null
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": null
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim's Break Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="timer-styles.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="timer-display" id="timerDisplay">00:00</div>
+        <div class="quote" id="quote"></div>
+        
+        <div class="timer-controls">
+            <div class="preset-buttons">
+                <button class="preset-btn" data-minutes="5">5 min</button>
+                <button class="preset-btn" data-minutes="8">8 min</button>
+                <button class="preset-btn" data-minutes="9">9 min</button>
+                <button class="preset-btn" data-minutes="10">10 min</button>
+            </div>
+            <div class="custom-timer">
+                <input type="number" id="customMinutes" min="1" max="999" placeholder="Minutes" class="custom-input">
+                <button id="customBtn" class="preset-btn custom">Set</button>
+            </div>
+            <div class="control-buttons">
+                <button id="startBtn" class="control-btn start">Start</button>
+                <button id="pauseBtn" class="control-btn pause" disabled>Pause</button>
+                <button id="resetBtn" class="control-btn reset">Reset</button>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+        </div>
+        
+        <div class="branding">
+            <a href="https://techtrainertim.com" target="_blank" rel="noopener">TechTrainerTim.com</a>
+        </div>
+    </div>
+    
+    <button id="fullscreenBtn" class="fullscreen-btn" title="Toggle Fullscreen (F11)">⛶</button>
+    
+    <script src="timer-script.js"></script>
+</body>
+</html>
